@@ -6,9 +6,6 @@
 </div>
 <div class="rounded-md w-full aspect-square mt-3">
     <QrcodeStream class="w-full" :track="paintOutline" @error="logErrors" />
-    {{ badgesStore.badges }}
-    {{ qrcodeValue }}
-    {{ check }}
 </div>
 </template>
 
@@ -24,7 +21,6 @@ import {
 } from 'vue'
 
 const qrcodeValue = ref('test')
-const check = ref(false)
 
 const badgesStore = useBadgesStore()
 const notificationStore = useNotificationsStore()
@@ -58,7 +54,6 @@ function paintOutline(detectedCodes, ctx) {
 
     for (const badge of badgesStore.badges) {
         if (badge.qrCodeValue === qrcodeValue.value) {
-            check.value = true
             badgesStore.toggleCollected(badge.id)
             notificationStore.showNotification = true
             router.push('/')

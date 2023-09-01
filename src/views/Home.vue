@@ -1,7 +1,7 @@
 <template>
 <div class="flex flex-col space-y-4">
 
-    <div class="bg-gray-100 w-full rounded-md p-6">
+    <div class="bg-white w-full rounded-md p-6 shadow">
         <div class="grid grid-cols-5 sm:grid-cols-5 gap-y-3">
             <div class="flex justify-center" v-for="badge in badgesStore.badges">
                 <div class="rounded-full h-14 w-14 sm:h-20 sm:w-20 md:h-28 md:w-28" :class="[ badge.collected ? badge.color : 'bg-gray-300']"></div>
@@ -35,7 +35,7 @@ function toggleBadge(id) {
     badgesStore.toggleCollected(id);
 }
 
-if notificationStore.showNotification {
+if (notificationStore.showNotification) {
     setTimeout(() => {
         notificationStore.showNotification = false
     }, 3000)

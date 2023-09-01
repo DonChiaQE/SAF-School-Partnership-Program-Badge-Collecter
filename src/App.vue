@@ -16,3 +16,9 @@ import {
 import Footer from './components/Footer.vue'
 import Header from './components/Header.vue'
 </script>
+
+<style>
+body {
+    background-color: #f9fafb;
+}
+</style>
