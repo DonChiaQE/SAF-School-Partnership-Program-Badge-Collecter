@@ -57,11 +57,13 @@ function paintOutline(detectedCodes, ctx) {
     // check if qrcodevalue is equal to any of that from badges
     // if so, toggle collected
     // if not, show error
-    if (badgesStore.badges.some(badge => badge.qrcodeValue === qrcodeValue.value)) {
-        check.value = true
-        badgesStore.toggleCollected(badge.id)
-        notificationStore.showNotification = true
-        router.push('/')
-    } 
+    for (const badge of badgesStore.badges) {
+        if (badge.qrcodeValue === qrcodeValue.value) {
+            check.value = true
+            badgesStore.toggleCollected(badge.id)
+            notificationStore.showNotification = true
+            router.push('/')
+        }
+    }
 }
 </script>
