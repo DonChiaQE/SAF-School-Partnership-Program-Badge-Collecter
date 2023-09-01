@@ -38,6 +38,6 @@ function toggleBadge(id) {
 if (notificationStore.showNotification) {
     setTimeout(() => {
         notificationStore.showNotification = false
-    }, 3000)
+    }, 6000)
 }
 </script>
