@@ -57,7 +57,7 @@ function paintOutline(detectedCodes, ctx) {
     }
 
     for (const badge of badgesStore.badges) {
-        if (badge.qrcodeValue === qrcodeValue.value) {
+        if (badge.qrCodeValue === qrcodeValue.value) {
             check.value = true
             badgesStore.toggleCollected(badge.id)
             notificationStore.showNotification = true
