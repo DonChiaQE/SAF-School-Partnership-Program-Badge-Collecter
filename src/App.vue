@@ -15,7 +15,9 @@ import {
 
 import Footer from './components/Footer.vue'
 import Header from './components/Header.vue'
-import { useNameStore } from './store/name'
+import {
+    useNameStore
+} from './store/name'
 
 const nameStore = useNameStore()
 </script>

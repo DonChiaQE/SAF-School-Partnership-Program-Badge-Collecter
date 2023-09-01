@@ -15,18 +15,24 @@
         </button>
     </RouterLink>
 
-    <Notification v-if="notificationStore.showNotification"/>
+    <Notification v-if="notificationStore.showNotification" />
 </div>
-<NameModal v-if="nameStore.name === ''"/>
+<NameModal v-if="nameStore.name === ''" />
 </template>
 
 <script setup>
 import {
     CameraIcon
-} from '@heroicons/vue/20/solid' 
-import { useBadgesStore } from '../store/badges'
-import { useNotificationsStore } from '../store/notifications'
-import { useNameStore } from '../store/name'
+} from '@heroicons/vue/20/solid'
+import {
+    useBadgesStore
+} from '../store/badges'
+import {
+    useNotificationsStore
+} from '../store/notifications'
+import {
+    useNameStore
+} from '../store/name'
 
 import Notification from '../components/Notification.vue'
 import NameModal from '../components/NameModal.vue'

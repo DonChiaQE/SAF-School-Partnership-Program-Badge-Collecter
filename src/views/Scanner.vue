@@ -13,9 +13,17 @@
 import {
     QrcodeStream,
 } from 'vue-qrcode-reader'
-import { useBadgesStore } from '../store/badges';
-import { useNotificationsStore } from '../store/notifications';
-import { RouterLink, useRoute, useRouter } from 'vue-router'
+import {
+    useBadgesStore
+} from '../store/badges';
+import {
+    useNotificationsStore
+} from '../store/notifications';
+import {
+    RouterLink,
+    useRoute,
+    useRouter
+} from 'vue-router'
 import {
     ref
 } from 'vue'

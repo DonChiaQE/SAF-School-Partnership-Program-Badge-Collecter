@@ -1,6 +1,6 @@
 <template>
 <TransitionRoot as="template" :show="open">
-    <Dialog as="div" class="relative z-10" @close="open = false">
+    <Dialog as="div" class="relative z-10">
         <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
             <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
         </TransitionChild>
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="mt-5 sm:mt-6">
-                            <button :disabled="name === ''" type="button" class="inline-flex w-full justify-center rounded-md disabled:opacity-30 bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" @click=submitName>Submit</button>
+                            <button :disabled="name === ''" type="button" class="inline-flex w-full justify-center rounded-md disabled:opacity-30 disabled:hover:bg-blue-600 bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" @click=submitName>Submit</button>
                         </div>
                     </DialogPanel>
                 </TransitionChild>

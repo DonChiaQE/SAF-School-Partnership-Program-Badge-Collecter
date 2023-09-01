@@ -13,7 +13,6 @@ const router = createRouter({
             name: 'Scanner',
             component: () => import('../views/Scanner.vue')
         },
-        // { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
     ]
 })
 
