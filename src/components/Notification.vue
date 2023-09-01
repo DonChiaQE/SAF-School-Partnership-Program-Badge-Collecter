@@ -11,8 +11,8 @@
                   <CheckCircleIcon class="h-6 w-6 text-green-400" aria-hidden="true" />
                 </div>
                 <div class="ml-3 w-0 flex-1 pt-0.5">
-                  <p class="text-sm font-medium text-gray-900">Successfully saved!</p>
-                  <p class="mt-1 text-sm text-gray-500">Anyone with a link can now view this file.</p>
+                  <p class="text-sm font-medium text-gray-900">Badge Collected!</p>
+                  <p class="mt-1 text-sm text-gray-500">Explore. Collect. Win.</p>
                 </div>
                 <div class="ml-4 flex flex-shrink-0">
                   <button type="button" @click="show = false" class="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">

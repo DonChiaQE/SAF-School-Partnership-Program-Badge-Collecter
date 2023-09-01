@@ -77,7 +77,7 @@ export const useBadgesStore = defineStore("badges", () => {
     function toggleCollected(id) {
         const badge = badges.value.find((b) => b.id === id);
         if (badge) {
-            badge.collected = !badge.collected;
+            badge.collected = true
             persistData(badges.value);
         }
     }

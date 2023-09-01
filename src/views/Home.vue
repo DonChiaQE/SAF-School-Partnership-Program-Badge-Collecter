@@ -34,4 +34,10 @@ const notificationStore = useNotificationsStore()
 function toggleBadge(id) {
     badgesStore.toggleCollected(id);
 }
+
+if notificationStore.showNotification {
+    setTimeout(() => {
+        notificationStore.showNotification = false
+    }, 3000)
+}
 </script>
