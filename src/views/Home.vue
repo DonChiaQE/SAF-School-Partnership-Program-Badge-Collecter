@@ -2,9 +2,9 @@
 <div class="flex flex-col space-y-4">
 
     <div class="bg-gray-100 w-full rounded-md p-6">
-        <div class="grid grid-cols-5 sm:grid-cols-4 gap-y-3">
-            <div class="flex justify-center" v-for="n in 10">
-                <div class="bg-blue-300 rounded-full h-12 w-12"></div>
+        <div class="grid grid-cols-5 sm:grid-cols-5 gap-y-3">
+            <div class="flex justify-center" v-for="badge in badgesStore.badges">
+                <div class="rounded-full h-14 w-14 sm:h-20 sm:w-20 md:h-28 md:w-28" :class="[ badge.collected ? badge.color : 'bg-gray-300']"></div>
             </div>
         </div>
     </div>
@@ -16,11 +16,22 @@
         </button>
     </RouterLink>
 
+    <Notification v-if="notificationStore.showNotification"/>
 </div>
 </template>
 
 <script setup>
 import {
     CameraIcon
-} from '@heroicons/vue/20/solid'
+} from '@heroicons/vue/20/solid' 
+import { useBadgesStore } from '../store/badges'
+import { useNotificationsStore } from '../store/notifications'
+import Notification from '../components/Notification.vue'
+
+const badgesStore = useBadgesStore()
+const notificationStore = useNotificationsStore()
+
+function toggleBadge(id) {
+    badgesStore.toggleCollected(id);
+}
 </script>

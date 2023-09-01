@@ -14,11 +14,16 @@
 import {
     QrcodeStream,
 } from 'vue-qrcode-reader'
+import { useBadgesStore } from '../store/badges';
+import { useNotificationsStore } from '../store/notifications';
 import {
     ref
 } from 'vue'
 
 const qrcodeValue = ref('test')
+
+const badgesStore = useBadgesStore()
+const notificationStore = useNotificationsStore()
 
 const logErrors = (error) => {
     console.log(error)
@@ -44,6 +49,13 @@ function paintOutline(detectedCodes, ctx) {
         ctx.lineTo(firstPoint.x, firstPoint.y)
         ctx.closePath()
         ctx.stroke()
+    }
+    for (badge in badgesStore.badges) {
+        if (badge.qrCodeValue == qrcodeValue) {
+            badgesStore.toggleCollected(badge.id)
+            notificationStore.showNotification = true
+            router.push('/')
+        }
     }
 }
 </script>
