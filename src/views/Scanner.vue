@@ -64,7 +64,11 @@ function paintOutline(detectedCodes, ctx) {
         if (badge.qrCodeValue === qrcodeValue.value) {
             badgesStore.toggleCollected(badge.id)
             notificationStore.showNotification = true
-            router.push('/')
+            // delay
+            setTimeout(() => {
+                router.push('/')
+            }, 6000)
+            
         }
     }
 }
