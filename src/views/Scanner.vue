@@ -6,6 +6,7 @@
 </div>
 <div class="rounded-md w-full aspect-square mt-3">
     <QrcodeStream class="w-full" :track="paintOutline" @error="logErrors" />
+    {{ badgesStore.badges }}
     {{ qrcodeValue }}
     {{ check }}
 </div>
@@ -54,9 +55,7 @@ function paintOutline(detectedCodes, ctx) {
         ctx.closePath()
         ctx.stroke()
     }
-    // check if qrcodevalue is equal to any of that from badges
-    // if so, toggle collected
-    // if not, show error
+
     for (const badge of badgesStore.badges) {
         if (badge.qrcodeValue === qrcodeValue.value) {
             check.value = true

@@ -11,7 +11,7 @@ function loadPersistedData() {
 }
 
 export const useBadgesStore = defineStore("badges", () => {
-    const badges = ref(loadPersistedData() || [
+    const badges = ref([
     {
         id: 1,
         qrCodeValue: "a",
