@@ -1,6 +1,12 @@
 <template>
-    <div class="flex space-x-4 w-full items-center justify-center mb-8">
-        <div class="bg-red-100 w-16 h-16 rounded-full"></div>
-        <div class="bg-green-100 w-16 h-16 rounded-full"></div>
+    <div class="mb-8">
+        <p class="text-xl font-light">Welcome,</p>
+        <h1 class="text-4xl font-bold">REC {{ nameStore.name }}</h1>
+        <p class="text-xl font-light">SSPP 10C4I x EJC</p>
     </div>
 </template>
+
+<script setup>
+import { useNameStore } from '../store/name'
+const nameStore = useNameStore()
+</script>

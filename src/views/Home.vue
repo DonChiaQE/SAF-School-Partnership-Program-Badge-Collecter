@@ -1,6 +1,5 @@
 <template>
-<div class="flex flex-col space-y-4">
-
+<div v-if="nameStore.name !== ''" class="flex flex-col space-y-4">
     <div class="bg-white w-full rounded-xl p-6 shadow">
         <div class="grid grid-cols-5 sm:grid-cols-5 gap-y-3">
             <div class="flex justify-center" v-for="badge in badgesStore.badges">
@@ -18,6 +17,7 @@
 
     <Notification v-if="notificationStore.showNotification"/>
 </div>
+<NameModal v-if="nameStore.name === ''"/>
 </template>
 
 <script setup>
@@ -26,8 +26,12 @@ import {
 } from '@heroicons/vue/20/solid' 
 import { useBadgesStore } from '../store/badges'
 import { useNotificationsStore } from '../store/notifications'
-import Notification from '../components/Notification.vue'
+import { useNameStore } from '../store/name'
 
+import Notification from '../components/Notification.vue'
+import NameModal from '../components/NameModal.vue'
+
+const nameStore = useNameStore()
 const badgesStore = useBadgesStore()
 const notificationStore = useNotificationsStore()
 
