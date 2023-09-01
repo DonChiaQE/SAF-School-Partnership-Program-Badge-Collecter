@@ -5,7 +5,7 @@
     </RouterLink>
 </div>
 <div class="rounded-md w-full aspect-square mt-3">
-    <QrcodeStream :track="paintBoundingBox" @error="logErrors" />
+    <QrcodeStream :track="paintOutline" @error="logErrors" />
     {{ qrcodeValue }}
 </div>
 </template>

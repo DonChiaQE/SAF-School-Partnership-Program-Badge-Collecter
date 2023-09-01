@@ -4,7 +4,7 @@
     <div class="bg-gray-100 w-full rounded-md p-6">
         <div class="grid grid-cols-5 sm:grid-cols-4 gap-y-3">
             <div class="flex justify-center" v-for="n in 10">
-                <div class="bg-blue-300 rounded-full h-16 w-16"></div>
+                <div class="bg-blue-300 rounded-full h-12 w-12"></div>
             </div>
         </div>
     </div>
