@@ -16,6 +16,7 @@ import {
 } from 'vue-qrcode-reader'
 import { useBadgesStore } from '../store/badges';
 import { useNotificationsStore } from '../store/notifications';
+import { RouterLink, useRoute, useRouter } from 'vue-router'
 import {
     ref
 } from 'vue'
@@ -24,6 +25,7 @@ const qrcodeValue = ref('test')
 
 const badgesStore = useBadgesStore()
 const notificationStore = useNotificationsStore()
+const router = useRouter()
 
 const logErrors = (error) => {
     console.log(error)
