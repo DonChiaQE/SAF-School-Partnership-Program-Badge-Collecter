@@ -7,7 +7,7 @@
 <div class="rounded-md w-full aspect-square mt-3">
     <QrcodeStream class="w-full" :track="paintOutline" @error="logErrors" />
     {{ qrcodeValue }}
-    {{ true }}
+    {{ check }}
 </div>
 </template>
 
@@ -58,7 +58,8 @@ function paintOutline(detectedCodes, ctx) {
     // if so, toggle collected
     // if not, show error
     if (badgesStore.badges.some(badge => badge.qrcodeValue === qrcodeValue.value)) {
-        badgesStore.toggleCollected(qrcodeValue.value)
+        check.value = true
+        badgesStore.toggleCollected(badge.id)
         notificationStore.showNotification = true
         router.push('/')
     } 
