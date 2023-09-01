@@ -54,13 +54,22 @@ function paintOutline(detectedCodes, ctx) {
         ctx.closePath()
         ctx.stroke()
     }
-    for (badge in badgesStore.badges) {
-        if (badge.qrCodeValue == qrcodeValue) {
-            check.value = true
+    // check if qrcodevalue is equal to any of that from badges
+    // if so, toggle collected
+    // if not, show error
+    if (badgesStore.badges.some(badge => badge.qrCode === qrcodeValue.value)) {
+        const badge = badgesStore.badges.find(badge => badge.qrCode === qrcodeValue.value)
+        if (!badge.collected) {
             badgesStore.toggleCollected(badge.id)
             notificationStore.showNotification = true
             router.push('/')
+        } else {
+            notificationStore.showNotification = true
+            router.push('/')
         }
+    } else {
+        notificationStore.showNotification = true
+        router.push('/')
     }
 }
 </script>
