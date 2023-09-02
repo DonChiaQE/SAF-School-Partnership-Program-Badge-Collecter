@@ -105,5 +105,5 @@ export const useBadgesStore = defineStore("badges", () => {
         }
     }
 
-    return { badges, toggleCollected };
+    return { badges, recentlyCollected, toggleCollected };
 });

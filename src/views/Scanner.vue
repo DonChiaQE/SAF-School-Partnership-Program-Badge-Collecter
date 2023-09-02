@@ -6,6 +6,7 @@
 </div>
 <div class="rounded-md w-full aspect-square mt-3">
     <QrcodeStream class="w-full" :track="paintOutline" @error="logErrors" />
+    <!-- <button @click="testBadge()" class="absolute bottom-0 right-0 bg-blue-600 text-white rounded-md p-2 m-2">Submit</button> -->
 </div>
 </template>
 
@@ -70,5 +71,14 @@ function paintOutline(detectedCodes, ctx) {
             }, 2000)
         }
     }
+}
+
+function testBadge() {
+    badgesStore.toggleCollected(1)
+    notificationStore.showNotification = true
+    // delay
+    setTimeout(() => {
+        router.push('/')
+    }, 2000)
 }
 </script>
