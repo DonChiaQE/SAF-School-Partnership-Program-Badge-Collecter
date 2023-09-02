@@ -3,7 +3,8 @@
     <div class="bg-white w-full rounded-xl p-6 shadow">
         <div class="grid grid-cols-5 sm:grid-cols-5 gap-y-3">
             <div class="flex justify-center" v-for="badge in badgesStore.badges">
-                <div class="rounded-full h-14 w-14 sm:h-20 sm:w-20 md:h-28 md:w-28" :class="[ badge.collected ? badge.color : 'bg-gray-300']"></div>
+                <img :src="`/badges/${badge.image}.png`" class="w-full" :class="[ badge.collected ? 'grayscale-0 opacity-100' : 'grayscale opacity-30']"/>
+                <!-- <div class="rounded-full h-14 w-14 sm:h-20 sm:w-20 md:h-28 md:w-28" :class="[ badge.collected ? badge.color : 'bg-gray-300']"></div> -->
             </div>
         </div>
     </div>
