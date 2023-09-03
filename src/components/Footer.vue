@@ -6,7 +6,7 @@
             <img src="../assets/icons/10c4i.png" class="w-12"/>
         </div>
         <div class="mt-4 md:order-1 flex flex-col space-y-4 items-center">
-            <p class="text-center text-xs leading-5 text-gray-500">&copy; {{new Date().getFullYear()}} 10C4I x Eunoia JC</p>
+            <p class="text-center text-xs leading-5 text-gray-500">SSPP - 10 C4I Bn x Eunoia Junior College (7 Sep 23)</p>
         </div>
     </div>
 </footer>
