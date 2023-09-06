@@ -22,13 +22,13 @@
                                         <p class="text-xs text-gray-500">This data will be used promotional purposes.</p>
                                     </div> -->
                                     <div class="mt-4">
-                                        <input name="entry.1045313476" v-model="name" type="text" placeholder="John Doe" class="block w-full rounded-t-md border-0 py-2.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" required="true" />
+                                        <input name="entry.1045313476" v-model="name" type="text" placeholder="John Doe" class="block w-full rounded-md border-0 py-2.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" required="true" />
                                     </div>
-                                    <div class="">
-                                        <input name="entry.203316325" v-model="email" type="email" placeholder="johndoe@aol.com" class="block w-full rounded-b-md border-0 py-2.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" required="true" />
+                                    <div class="mt-2">
+                                        <input name="entry.203316325" v-model="email" type="email" placeholder="johndoe@aol.com" class="block w-full rounded-md border-0 py-2.5 pl-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" required="true" />
                                     </div>
                                 </div>
-                                <p class="text-xs mt-3 text-gray-500">By participating, you agree to have promotional emails sent to the email as stated above.</p>
+                                <p class="text-xs mt-3 text-gray-500">By participating, you agree to have SAF promotional emails sent to you.</p>
                             </div>
                             <div class="mt-5 sm:mt-6">
                                 <button type="submit" :disabled="name === '' || email === ''" class="inline-flex w-full justify-center rounded-md disabled:opacity-30 disabled:hover:bg-blue-600 bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
