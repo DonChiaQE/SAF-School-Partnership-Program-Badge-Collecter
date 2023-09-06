@@ -3,7 +3,7 @@
     <div class="bg-white w-full rounded-xl px-4 py-4 shadow">
         <div class="grid grid-cols-3 sm:grid-cols-5 gap-y-4">
             <div class="flex justify-center" v-for="badge in badgesStore.badges">
-                <img :src="`/badges/${badge.image}.png`" class="w-full h-auto aspect-square" :class="[ badge.collected ? 'grayscale-0 opacity-100' : ' opacity-100']" title="Classified"/>
+                <img :src="`/badges/${badge.image}.png`" class="w-full h-auto aspect-square" :class="[ badge.collected ? 'grayscale-0 opacity-100' : 'grayscale opacity-30']" title="Classified"/>
             </div>
         </div>
     </div>
