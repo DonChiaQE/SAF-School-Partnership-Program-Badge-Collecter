@@ -78,7 +78,7 @@ export const useBadgesStore = defineStore("badges", () => {
     },
     {
         id: 9,
-        name: 'Sierra',
+        name: 'HQ',
         qrCodeValue: "s",
         image: "hq",
         color: "bg-rose-400",
@@ -86,7 +86,7 @@ export const useBadgesStore = defineStore("badges", () => {
     },
     {
         id: 10,
-        name: 'Romeo',
+        name: 'Recruitment Booth',
         qrCodeValue: "r",
         image: "signals",
         color: "bg-teal-400",
