@@ -68,7 +68,7 @@ function paintOutline(detectedCodes, ctx) {
             // delay
             setTimeout(() => {
                 router.push('/')
-            }, 2000)
+            }, 1000)
         }
     }
 }
